@@ -34,7 +34,6 @@ async def stater_pack(call: types.CallbackQuery):
 @router.callback_query(lambda c: c.data == 'you')
 async def yourself(call: types.CallbackQuery, state: FSMContext):
     global q, numbers, number
-    numbers = [3, 4, 5, 6, 7]
     more_less = ['больше', 'меньше']
     number = random.randint(3, 8)
     q = random.choice(more_less)
